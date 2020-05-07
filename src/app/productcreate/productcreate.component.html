@@ -1,0 +1,45 @@
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+     <h2>Product Add Form</h2>
+
+    <form [formGroup]="productform" class="form" novalidate>
+
+        <div class="item" fxFlex="100px">
+            <mat-form-field   appearance="outline" class="example-full-width">
+              <mat-label>Id</mat-label>
+              <input matInput placeholder="id" formControlName="id">
+            </mat-form-field>
+        </div>
+    <div class="item" fxFlex="100px">
+        <mat-form-field   appearance="outline" class="example-full-width">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First name" formControlName="firstname">
+        </mat-form-field>
+    </div>
+
+    <div class="item" fxFlex="100px">
+        <mat-form-field  appearance="outline" class="example-full-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput placeholder="last name"  formControlName="lastname">
+          </mat-form-field>
+    </div>
+
+    <div class="item" fxFlex="100px">
+          <mat-form-field  appearance="outline" class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="email"  formControlName="email">
+          </mat-form-field>
+    </div>
+
+        </form>
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" [disabled]="productform.invalid" (click)="createProduct()">Submit</button>
+ 
+        <button mat-raised-button color="primary" (click)="closeDialog()">Cencel</button>
+    </div>
+  <!-- <div class="item item-5" fxFlex="200px">Item 5</div> -->
+</div>

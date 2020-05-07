@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 style="margin-bottom: -3px;">Product Table</h2>
+    <button type="button" (click)="goToAdd()" class="btn btn-primary btnClass">AppProduct</button>
+    <!--table start-->
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+            <th>Sno</th>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Email</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of productArray ; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{item.firstname}}</td>
+            <td>{{item.lastname}}</td>
+            <td>{{item.email}}</td>
+            <td>
+               <span style="cursor: pointer;"(click)="edit(item)"><mat-icon>edit</mat-icon> </span> 
+            &nbsp;&nbsp;&nbsp;
+               <span style="cursor: pointer;" (click)="delete(item)"> <mat-icon>delete</mat-icon>
+               </span>
+            </td>
+
+        </tr>
+      </tbody>
+    </table>
+    <!--table end-->
+
+  </div>
